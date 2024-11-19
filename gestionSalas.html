@@ -12,14 +12,11 @@
     <title>Dashborad - CinemaPremier</title>
 
   <!-- Fuentes para la plantilla-->
-    <link rel="stylesheet" href="vendor/butterup-main/butterup.min.css" />
+    
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-        
 
     <!-- Estilos personalizados -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -27,6 +24,7 @@
     <link href="css/InventarioDulceria/InventarioDulceria.css" rel="stylesheet" >
     <link href="css/ventaDulceria/ventaDulceria.css" rel="stylesheet" >
     <link href="css/Dashboard/reservaAsientos.css" rel="stylesheet" >
+    <link href="css/Empleados/gestionEmpleados.css" rel="stylesheet" >
 
 
 
@@ -167,7 +165,7 @@
                 <div id="collapseDulceria" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="inventario-dulceria.html">Inventario de dulcería</a>
-                        <a class="collapse-item" href="preciosDulceria.html">Gestión de precios</br> de dulcería</a>
+                        <a class="collapse-item" href="register.html">Gestión de precios</br> de dulcería</a>
                         <a class="collapse-item" href="ventas-dulceria.html">Ventas de dulcería</a>
                     </div>
                 </div>
@@ -234,115 +232,165 @@
                         Cinema Premier
                     </span>
                 </nav>
-            
-        <!-- Contenido dentro del dashboard -->
-        <div class="container-fluid">
-            <div class="row g-5">
-                <div class="col-md-4 col-lg-3">
-                    <a href="ventaBoletos.html" class="card text-center text-decoration-none shadow mb-4">
-                        <div class="card-body">
-                            <i class="fas fa-ticket-alt fa-3x" ></i>
-                            <h5 class="card-title mt-3">Venta de boletos</h5>
-                            <p class="card-text">&nbsp;</p>
+
+
+
+                <!-- Gestión de Empleados -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid mt-5">
+                    <form class="row g-4">
+                        <h3 class="mb-3 text-primary text-center">Gestión de Salas</h3>
+                    </form>
+
+                    <!-- Primera Fila -->
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="employeeName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control shadow-sm" id="employeeName" placeholder="Nombre ">
                         </div>
-                    </a>
+
+                        <div class="col-md-4">
+                            <label for="employeeName" class="form-label">Apellido Paterno</label>
+                            <input type="text" class="form-control shadow-sm" id="employeeNamelastnameFa"
+                                placeholder="Apellido Paterno">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="employeeName" class="form-label">Apellido Materno</label>
+                            <input type="text" class="form-control shadow-sm" id="employeelastnameMo"
+                                placeholder="Apellido Materno">
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <!-- Segunda Fila -->
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Calle</label>
+                            <input type="text" class="form-control shadow-sm" id="inputAddress"
+                                placeholder="San pedritro #1083">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress2" class="form-label">Colonia</label>
+                            <input type="text" class="form-control shadow-sm" id="inputAddress2" placeholder="Colonia">
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <!-- Tercera Fila -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="inputCity" class="form-label">Ciudad</label>
+                            <input type="text" class="form-control shadow-sm" id="inputCity" placeholder="Ciudad">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputZip" class="form-label">Código Postal</label>
+                            <input type="text" class="form-control shadow-sm" id="inputZip" placeholder="12345">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Departamento</label>
+                            <input type="text" class="form-control shadow-sm" id="inputCity" placeholder="Ciudad">
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="dropdown ">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Roles Empleados
+                        </button>
+                        <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Limpieza</a>
+                            <a class="dropdown-item" href="#">Dulceria</a>
+                            <a class="dropdown-item" href="#">Caja</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary px-4 py-2 shadow-sm" id="registrarEmpleado">Registrar Empleado</button>
+                    </div>
+                    </form>
                 </div>
-                <div class="col-md-4 col-lg-3">
-                    <a href="peliculas.html" class="card text-center text-decoration-none shadow mb-4">
-                        <div class="card-body">
-                            <i class="fa fa-film fa-3x" ></i>
-                            <h5 class="card-title mt-3">Peliculas</h5>
-                            <p class="card-text">&nbsp;</p>
-                        </div>
-                    </a>
-                </div>
-                     
-                <div class="col-md-4 col-lg-3">
-                    <a href="gestionSalas.html" class="card text-center text-decoration-none shadow mb-4">
-                        <div class="card-body">
-                            <i class="fas fa-video fa-3x"></i>
-                            <h5 class="card-title mt-3">Gestión de salas</h5>
-                            <p class="card-text">&nbsp;</p>
-                        </div>
-                    </a>
+                <div class="col-md-4">
                 </div>
 
-                <div class="col-md-4 col-lg-3">
-                    <a href="gestionEmpleados.html" class="card text-center text-decoration-none shadow mb-4">
-                        <div class="card-body">
-                            <i class="fas fa-users fa-3x"></i>
-                            <h5 class="card-title mt-3">Gestión de empleados</h5>
-                            <p class="card-text">&nbsp;</p>
+                <!-- Fin del contenedor -->
+                <br>
+                <!-- Gestión de Empleados -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Gestión de Empleados</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Rol</th>
+                                        <th>Departamento</th>
+                                        <th>Estado</th>
+                                        <th>Fecha de Inicio</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Juan Pérez</td>
+                                        <td>Gerente</td>
+                                        <td>Ventas</td>
+                                        <td>Activo</td>
+                                        <td>2022/01/15</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-info" id="editar">Editar</button>
+                                            <button class="btn btn-sm btn-danger" id="eliminar">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>María López</td>
+                                        <td>Asistente</td>
+                                        <td>Recursos Humanos</td>
+                                        <td>Inactivo</td>
+                                        <td>2021/07/30</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-info" id="editar">Editar</button>
+                                            <button class="btn btn-sm btn-danger" id="eliminar">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Carlos Gómez</td>
+                                        <td>Analista</td>
+                                        <td>TI</td>
+                                        <td>Activo</td>
+                                        <td>2023/04/10</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-info" id="editar">Editar</button>
+                                            <button class="btn btn-sm btn-danger" id="eliminar">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
-                <div class="col-md-4 col-lg-3">
-                    <a href="ventas-dulceria.html" class="card text-center text-decoration-none shadow mb-4">
-                        <div class="card-body">
-                            <i class="fas fa-cash-register fa-3x"></i>
-                            <h5 class="card-title mt-3">Ventas de dulcería</h5>
-                            <p class="card-text">&nbsp;</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-lg-3">
-                    <a href="gestion-clientes.html" class="card text-center text-decoration-none shadow mb-4">
-                        <div class="card-body">
-                            <i class="fas fa-users fa-3x"></i>
-                            <h5 class="card-title mt-3">Gestión de clientes</h5>
-                            <p class="card-text">&nbsp;</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-lg-3">
-                    <a href="programacion-funciones.html" class="card text-center text-decoration-none shadow mb-4">
-                        <div class="card-body">
-                            <i class="fas fa-clock fa-3x"></i>
-                            <h5 class="card-title mt-3">Programación de funciones</h5>
-                            <p class="card-text">&nbsp;</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-lg-3">
-                    <a href="gestionRoles.html" class="card text-center text-decoration-none shadow mb-4">
-                        <div class="card-body">
-                            <i class="fas fa-user-cog fa-3x"></i>
-                            <h5 class="card-title mt-3">Gestión de roles de empleados</h5>
-                            <p class="card-text">&nbsp;</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-lg-3">
-                    <a href="registro-clientes.html" class="card text-center text-decoration-none shadow mb-4">
-                        <div class="card-body">
-                            <i class="fas fa-user-plus fa-3x"></i>
-                            <h5 class="card-title mt-3">Registro de clientes</h5>
-                            <p class="card-text">&nbsp;</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-lg-3">
-                    <a href="reportes.html" class="card text-center text-decoration-none shadow mb-4">
-                        <div class="card-body">
-                            <i class="far fa-file-pdf fa-3x"></i>
-                            <h5 class="card-title mt-3">Reportes</h5>
-                            <p class="card-text">&nbsp;</p>
-                        </div>
-                    </a>
-                </div>
+
             </div>
-        </div>
-        
-        
-                
-                        <!-- Contenido dentro del dashboard -->
+            <!-- Fin del contenido principal -->
 
 
-
-
-            </div>
-            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
@@ -386,23 +434,21 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/butterup-main/butterup.min.js"></script>
-
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-    <script src="js/Controladores/index.js"></script>
+    <script src="../js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="../vendor/chart.js/Chart.min.js"></script>
+
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="../js/demo/chart-area-demo.js"></script>
+    <script src="../js/demo/chart-pie-demo.js"></script>
 
 </body>
 
